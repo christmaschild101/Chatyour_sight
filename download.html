@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download - Chatyour</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #e0e0e0; background: #121212; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 40px 0 20px; border-bottom: 2px solid #bb86fc; margin-bottom: 30px; }
+        header h1 { font-size: 2.5em; color: #bb86fc; letter-spacing: 1px; }
+        header p { color: #a0a0a0; font-size: 1.1em; margin-top: 8px; }
+        nav { text-align: center; margin: 20px 0 30px; }
+        nav a { display: inline-block; margin: 0 10px; padding: 10px 24px; background: #1e1e1e; color: #bb86fc; text-decoration: none; border-radius: 6px; border: 1px solid #333; font-weight: 600; }
+        nav a:hover { background: #bb86fc; color: #121212; }
+        nav a.active { background: #bb86fc; color: #121212; }
+        section { margin-bottom: 30px; }
+        h2 { color: #bb86fc; margin-bottom: 12px; font-size: 1.5em; }
+        p { margin-bottom: 16px; color: #c0c0c0; }
+        .highlight { background: #1e1e1e; border-left: 4px solid #bb86fc; padding: 20px; border-radius: 0 6px 6px 0; margin-bottom: 20px; }
+        .highlight.warning { border-left-color: #cf6679; }
+        .highlight.warning strong { color: #cf6679; }
+        ul { margin: 10px 0 20px 24px; color: #c0c0c0; }
+        li { margin-bottom: 8px; }
+        strong { color: #e0e0e0; }
+        .btn { display: inline-block; padding: 12px 32px; background: #333; color: #666; border: 2px solid #555; border-radius: 6px; font-size: 1.1em; font-weight: 600; cursor: not-allowed; text-decoration: none; margin-top: 10px; }
+        footer { text-align: center; padding: 30px 0 10px; border-top: 1px solid #333; color: #666; font-size: 0.9em; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8em; }
+            nav a { display: block; margin: 8px 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Download Chatyour</h1>
+            <p>Get the client and start chatting</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="download.html" class="active">Download</a>
+            <a href="server-status.html">Server Status</a>
+            <a href="motd.html">Message of the Day</a>
+        </nav>
+
+        <div class="highlight warning">
+            <strong>The Chatyour client is not yet ready for download.</strong> Development is still in progress, and the client is not currently available to the public. Please check back at a later date for release announcements.
+        </div>
+
+        <section>
+            <h2>What to Expect</h2>
+            <p>Once released, the Chatyour client will be available as a Python-based desktop application for Windows. It requires Python 3 and the wxPython library to run.</p>
+            <p>The client connects to the Chatyour server via WebSocket and provides a fully accessible chat experience through:</p>
+            <ul>
+                <li>A wxPython graphical interface designed for screen reader compatibility</li>
+                <li>Built-in text-to-speech via accessible_output2 for instant audio feedback</li>
+                <li>Keyboard shortcuts for all major actions (Ctrl+Q to leave a room, Ctrl+S to save)</li>
+                <li>Automatic background reconnection on network interruption</li>
+                <li>Support for multiple simultaneous chat rooms</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>System Requirements</h2>
+            <ul>
+                <li>Windows operating system (7 or later)</li>
+                <li>Python 3.8 or higher</li>
+                <li>wxPython 4.x</li>
+                <li>A screen reader such as NVDA or JAWS (recommended but not required)</li>
+            </ul>
+        </section>
+
+        <p style="text-align: center; margin-top: 20px;">
+            <span class="btn">Download Not Available</span>
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Chatyour Project. Built for accessibility.</p>
+    </footer>
+</body>
+</html>

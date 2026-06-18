@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatyour - Accessible Chat for the Blind</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #e0e0e0; background: #121212; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 40px 0 20px; border-bottom: 2px solid #bb86fc; margin-bottom: 30px; }
+        header h1 { font-size: 2.5em; color: #bb86fc; letter-spacing: 1px; }
+        header p { color: #a0a0a0; font-size: 1.1em; margin-top: 8px; }
+        nav { text-align: center; margin: 20px 0 30px; }
+        nav a { display: inline-block; margin: 0 10px; padding: 10px 24px; background: #1e1e1e; color: #bb86fc; text-decoration: none; border-radius: 6px; border: 1px solid #333; font-weight: 600; }
+        nav a:hover { background: #bb86fc; color: #121212; }
+        nav a.active { background: #bb86fc; color: #121212; }
+        section { margin-bottom: 30px; }
+        h2 { color: #bb86fc; margin-bottom: 12px; font-size: 1.5em; }
+        p { margin-bottom: 16px; color: #c0c0c0; }
+        ul { margin: 10px 0 20px 24px; color: #c0c0c0; }
+        li { margin-bottom: 8px; }
+        strong { color: #e0e0e0; }
+        .highlight { background: #1e1e1e; border-left: 4px solid #bb86fc; padding: 16px 20px; border-radius: 0 6px 6px 0; margin-bottom: 20px; }
+        footer { text-align: center; padding: 30px 0 10px; border-top: 1px solid #333; color: #666; font-size: 0.9em; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8em; }
+            nav a { display: block; margin: 8px 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chatyour</h1>
+            <p>Seamless, accessible chat for everyone</p>
+        </header>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="download.html">Download</a>
+            <a href="server-status.html">Server Status</a>
+            <a href="motd.html">Message of the Day</a>
+        </nav>
+
+        <section>
+            <h2>What is Chatyour?</h2>
+            <p>Chatyour is a real-time chat application designed from the ground up with accessibility as its core principle. It provides a seamless chat experience for blind and visually impaired users through deep screen reader integration, keyboard-driven navigation, and audio feedback.</p>
+            <p>Unlike mainstream chat platforms that often treat accessibility as an afterthought, Chatyour is built around it &mdash; every feature, every interaction is designed to work effortlessly with screen readers and text-to-speech software.</p>
+        </section>
+
+        <section>
+            <h2>Why Chatyour?</h2>
+            <div class="highlight">
+                <strong>Built for blind users, by people who understand accessibility.</strong> Chatyour integrates with <em>accessible_output2</em> for instant speech feedback, so you never need to look at the screen to know what's happening.
+            </div>
+            <ul>
+                <li><strong>Full screen reader support</strong> &mdash; All UI elements are properly labeled and announced.</li>
+                <li><strong>Text-to-speech feedback</strong> &mdash; Messages, status updates, and alerts are spoken aloud automatically.</li>
+                <li><strong>Keyboard-first navigation</strong> &mdash; Every action has a keyboard shortcut. No mouse required.</li>
+                <li><strong>Automatic reconnection</strong> &mdash; If the connection drops, Chatyour reconnects in the background without losing your place.</li>
+                <li><strong>Persistent chat rooms</strong> &mdash; Rooms can be saved and restored, so conversations are never lost.</li>
+                <li><strong>Admin tools</strong> &mdash; Full moderation controls including bans, role management, and server announcements.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>How It Helps</h2>
+            <p>For blind and visually impaired individuals, most chat platforms present significant barriers &mdash; inaccessible interfaces, poorly labeled controls, and features that require visual interaction. Chatyour eliminates these barriers entirely:</p>
+            <ul>
+                <li>Log in, navigate rooms, send messages, and manage your account all without ever looking at the screen.</li>
+                <li>Real-time speech alerts keep you informed of new messages, room changes, and server events.</li>
+                <li>The interface is streamlined and consistent, reducing cognitive load and learning curve.</li>
+                <li>Automatic reconnection means you stay in the conversation even with an unstable internet connection.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Chatyour Project. Built for accessibility.</p>
+    </footer>
+</body>
+</html>

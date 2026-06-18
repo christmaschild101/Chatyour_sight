@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Status - Chatyour</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #e0e0e0; background: #121212; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 40px 0 20px; border-bottom: 2px solid #bb86fc; margin-bottom: 30px; }
+        header h1 { font-size: 2.5em; color: #bb86fc; letter-spacing: 1px; }
+        header p { color: #a0a0a0; font-size: 1.1em; margin-top: 8px; }
+        nav { text-align: center; margin: 20px 0 30px; }
+        nav a { display: inline-block; margin: 0 10px; padding: 10px 24px; background: #1e1e1e; color: #bb86fc; text-decoration: none; border-radius: 6px; border: 1px solid #333; font-weight: 600; }
+        nav a:hover { background: #bb86fc; color: #121212; }
+        nav a.active { background: #bb86fc; color: #121212; }
+        section { margin-bottom: 30px; }
+        h2 { color: #bb86fc; margin-bottom: 12px; font-size: 1.5em; }
+        p { margin-bottom: 16px; color: #c0c0c0; }
+        .highlight { background: #1e1e1e; border-left: 4px solid #bb86fc; padding: 20px; border-radius: 0 6px 6px 0; margin-bottom: 20px; }
+        .status-indicator { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 8px; }
+        .status-indicator.online { background: #4caf50; box-shadow: 0 0 8px #4caf50; }
+        .status-indicator.offline { background: #cf6679; box-shadow: 0 0 8px #cf6679; }
+        .status-line { font-size: 1.2em; margin: 16px 0; padding: 12px 16px; background: #1e1e1e; border-radius: 6px; display: flex; align-items: center; }
+        ul { margin: 10px 0 20px 24px; color: #c0c0c0; }
+        li { margin-bottom: 8px; }
+        strong { color: #e0e0e0; }
+        footer { text-align: center; padding: 30px 0 10px; border-top: 1px solid #333; color: #666; font-size: 0.9em; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8em; }
+            nav a { display: block; margin: 8px 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Server Status</h1>
+            <p>Real-time status of the Chatyour server infrastructure</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="download.html">Download</a>
+            <a href="server-status.html" class="active">Server Status</a>
+            <a href="motd.html">Message of the Day</a>
+        </nav>
+
+        <div class="status-line">
+            <span class="status-indicator online"></span>
+            <strong>Server: Online</strong>
+            <span style="margin-left: auto; color: #a0a0a0;">wss://chatyour.alfiewain.com</span>
+        </div>
+
+        <div class="highlight">
+            <p><strong>The Chatyour server is currently online and operational.</strong> However, the client application is not yet ready for public release. The server is running and accepting WebSocket connections, but there is no stable client build available for download at this time.</p>
+            <p style="margin-bottom: 0;">Server administrators are actively developing and testing the client software. Once a stable release is available, an announcement will be made on this page and the Download page will be updated with the appropriate files.</p>
+        </div>
+
+        <section>
+            <h2>Server Details</h2>
+            <ul>
+                <li><strong>Protocol:</strong> WebSocket (WSS)</li>
+                <li><strong>Endpoint:</strong> wss://chatyour.alfiewain.com</li>
+                <li><strong>Authentication:</strong> Username and password login / registration</li>
+                <li><strong>Features:</strong> Multi-room chat, room saving/restoring, admin moderation tools, user role management</li>
+                <li><strong>Encryption:</strong> TLS-encrypted WebSocket connection</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>What This Means for Users</h2>
+            <p>While the server infrastructure is fully deployed and operational, there is currently no public-facing client application to connect to it. Development efforts are focused on completing the client software, which will provide a fully accessible chat experience for blind and visually impaired users.</p>
+            <p>Please monitor the <a href="download.html" style="color: #bb86fc;">Download page</a> for updates on client availability.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Chatyour Project. Built for accessibility.</p>
+    </footer>
+</body>
+</html>
