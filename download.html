@@ -24,7 +24,9 @@
         ul { margin: 10px 0 20px 24px; color: #c0c0c0; }
         li { margin-bottom: 8px; }
         strong { color: #e0e0e0; }
-        .btn { display: inline-block; padding: 12px 32px; background: #333; color: #666; border: 2px solid #555; border-radius: 6px; font-size: 1.1em; font-weight: 600; cursor: not-allowed; text-decoration: none; margin-top: 10px; }
+        .btn { display: inline-block; padding: 14px 40px; background: #bb86fc; color: #121212; border: none; border-radius: 6px; font-size: 1.2em; font-weight: 700; cursor: pointer; text-decoration: none; margin-top: 10px; transition: background 0.2s; }
+        .btn:hover { background: #a070e0; }
+        .countdown { color: #a0a0a0; font-size: 1em; margin-top: 12px; }
         footer { text-align: center; padding: 30px 0 10px; border-top: 1px solid #333; color: #666; font-size: 0.9em; }
         @media (max-width: 600px) {
             header h1 { font-size: 1.8em; }
@@ -46,21 +48,35 @@
             <a href="motd.html">Message of the Day</a>
         </nav>
 
-        <div class="highlight warning">
-            <strong>The Chatyour client is not yet ready for download.</strong> Development is still in progress, and the client is not currently available to the public. Please check back at a later date for release announcements.
+        <div class="highlight">
+            <strong>The Chatyour client is ready for download.</strong> The server is currently experiencing a temporary delay, but the client software is fully functional and available below. Download the zip, extract it, install the dependencies, and you will be ready to connect once the server is fully operational.
         </div>
 
         <section>
-            <h2>What to Expect</h2>
-            <p>Once released, the Chatyour client will be available as a Python-based desktop application for Windows. It requires Python 3 and the wxPython library to run.</p>
-            <p>The client connects to the Chatyour server via WebSocket and provides a fully accessible chat experience through:</p>
+            <h2>Download the Client</h2>
+            <p style="text-align: center; margin: 20px 0;">
+                <a class="btn" id="downloadButton" href="chatyour-client.zip">Download Chatyour Client</a>
+            </p>
+            <p class="countdown" id="countdownMessage" style="text-align: center;">Your download will start soon...</p>
+        </section>
+
+        <section>
+            <h2>What's Included</h2>
+            <p>The zip contains everything you need to run the Chatyour client:</p>
             <ul>
-                <li>A wxPython graphical interface designed for screen reader compatibility</li>
-                <li>Built-in text-to-speech via accessible_output2 for instant audio feedback</li>
-                <li>Keyboard shortcuts for all major actions (Ctrl+Q to leave a room, Ctrl+S to save)</li>
-                <li>Automatic background reconnection on network interruption</li>
-                <li>Support for multiple simultaneous chat rooms</li>
+                <li><strong>client.py</strong> &mdash; The main Chatyour client application</li>
+                <li><strong>requirements.txt</strong> &mdash; List of Python dependencies to install</li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Installation Instructions</h2>
+            <ol style="color: #c0c0c0; margin: 10px 0 20px 24px;">
+                <li style="margin-bottom: 8px;">Extract the zip file to a folder of your choice.</li>
+                <li style="margin-bottom: 8px;">Open a terminal in that folder and run: <code style="background: #333; padding: 2px 6px; border-radius: 3px;">pip install -r requirements.txt</code></li>
+                <li style="margin-bottom: 8px;">Run the client: <code style="background: #333; padding: 2px 6px; border-radius: 3px;">python client.py</code></li>
+                <li style="margin-bottom: 8px;">Optionally, use <code style="background: #333; padding: 2px 6px; border-radius: 3px;">--ws</code> for WebSocket mode if connecting to a remote server.</li>
+            </ol>
         </section>
 
         <section>
@@ -69,17 +85,33 @@
                 <li>Windows operating system (7 or later)</li>
                 <li>Python 3.8 or higher</li>
                 <li>wxPython 4.x</li>
+                <li>websockets library (for WebSocket mode)</li>
+                <li>accessible_output2 for text-to-speech feedback</li>
                 <li>A screen reader such as NVDA or JAWS (recommended but not required)</li>
             </ul>
         </section>
-
-        <p style="text-align: center; margin-top: 20px;">
-            <span class="btn">Download Not Available</span>
-        </p>
     </div>
 
     <footer>
         <p>&copy; 2026 Chatyour Project. Built for accessibility.</p>
     </footer>
+
+    <script>
+        var countdown = 5;
+        var msgEl = document.getElementById("countdownMessage");
+        var btn = document.getElementById("downloadButton");
+
+        function updateCountdown() {
+            if (countdown > 0) {
+                msgEl.textContent = "Your download will start in " + countdown + " seconds...";
+                countdown--;
+                setTimeout(updateCountdown, 1000);
+            } else {
+                msgEl.textContent = "Download started! If it did not, click the button above.";
+                window.location.href = btn.href;
+            }
+        }
+        updateCountdown();
+    </script>
 </body>
 </html>
