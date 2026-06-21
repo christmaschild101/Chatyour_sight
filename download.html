@@ -55,7 +55,7 @@
         <section>
             <h2>Download the Client</h2>
             <p style="text-align: center; margin: 20px 0;">
-                <a class="btn" id="downloadButton" href="chatyour-client.zip">Download Chatyour Client</a>
+                <a class="btn" id="downloadButton" href="chatyour-client.zip" download="chatyour-client.zip">Download Chatyour Client</a>
             </p>
             <p class="countdown" id="countdownMessage" style="text-align: center;">Your download will start soon...</p>
         </section>
@@ -101,6 +101,15 @@
         var msgEl = document.getElementById("countdownMessage");
         var btn = document.getElementById("downloadButton");
 
+        function triggerDownload() {
+            var a = document.createElement("a");
+            a.href = btn.href;
+            a.download = "chatyour-client.zip";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
         function updateCountdown() {
             if (countdown > 0) {
                 msgEl.textContent = "Your download will start in " + countdown + " seconds...";
@@ -108,7 +117,7 @@
                 setTimeout(updateCountdown, 1000);
             } else {
                 msgEl.textContent = "Download started! If it did not, click the button above.";
-                window.location.href = btn.href;
+                triggerDownload();
             }
         }
         updateCountdown();
